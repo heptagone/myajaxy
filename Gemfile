@@ -1,6 +1,18 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.11'
-gem 'sqlite3'
+
+group :development do
+  gem 'pg'
+  gem "therubyrhino"
+end
+group :test do
+  gem 'sqlite3'
+  gem "therubyrhino"
+end
+group :production do
+  gem 'pg'
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
